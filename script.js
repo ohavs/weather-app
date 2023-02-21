@@ -21,6 +21,7 @@ async function fetchWeather() {
         .catch(err => error());
     if (!response.ok) {
         getWeather(response, location)
+        console.log(response.data)
     } else {
         error()
     }
@@ -28,20 +29,6 @@ async function fetchWeather() {
 }
 
 
-
-// search.addEventListener("click", () => {
-//     let location = document.getElementById("location").value
-//     fetch(`https://meteostat.p.rapidapi.com/stations/hourly?station=10637&start=2023-02-21&end=2023-02-21&tz=Europe%2F${location}&units=celsius`, options)
-//         .then(response => response.json())
-//         .then(response => {
-//             if (response.status !== 200) {
-//                 error()
-//             } else {
-//                 getWeather(response, location)
-//             }
-//         })
-//         .catch(err => console.log("error"));
-// })
 
 function getWeather(response, location) {
     weatherCard.classList.remove("hide")
@@ -52,6 +39,9 @@ function getWeather(response, location) {
 </div>
 <div class="icon">
 <img src="weather-icon.png" alt="" width="200px">
+</div>
+<div class="temp">
+    <p id="temp-p">${weather.temp}° </p>
 </div>
 <div class="other-params">
 <div class="moisture">

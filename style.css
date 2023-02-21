@@ -51,7 +51,7 @@ i {
 }
 
 .weather-card {
-    height: 20rem;
+    height: 22rem;
     width: 16rem;
     padding: 2rem;
     background-color: white;
@@ -71,6 +71,10 @@ animation: opacity 4s;
 
 .icon{
 margin-top: 2rem;    
+}
+.temp{
+    margin-top: 1rem;
+    font-size: 1.6rem;
 }
 
 .other-params {
