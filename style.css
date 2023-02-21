@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #04263e;
+    font-family: 'Comfortaa', cursive;
+}
+
+.weather-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    gap: 5rem;
+}
+.big-card{
+    background-color: white;
+    
+}
+.weather-div input {
+    height: 4rem;
+    width: 12rem;
+    border-radius: 10px;
+    font-family: 'Comfortaa', cursive;
+    padding: 1rem;
+    margin: 0 1rem;
+    border: none;
+}
+
+
+i {
+    font-size: 1.5rem;
+}
+
+#search {
+    position: relative;
+    cursor: pointer;
+}
+
+.inputs {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.weather-card {
+    height: 20rem;
+    width: 16rem;
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: card 1s;
+}
+
+.location, .icon, .other-params,.error{
+animation: opacity 4s;
+}
+
+.location{
+    font-size: 2rem;
+}
+
+.icon{
+margin-top: 2rem;    
+}
+
+.other-params {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 4rem;
+    
+}
+
+.moisture, .wind-speed{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes card {
+    0%{
+        height: 0rem;
+    }
+    100%{
+        height: 20rem;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+}
