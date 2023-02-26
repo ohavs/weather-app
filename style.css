@@ -16,10 +16,12 @@ body {
     height: 50rem;
     gap: 5rem;
 }
-.big-card{
+
+.big-card {
     background-color: white;
-    
+
 }
+
 .weather-div input {
     height: 4rem;
     width: 12rem;
@@ -47,7 +49,7 @@ i {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .weather-card {
@@ -61,18 +63,23 @@ i {
     animation: card 1s;
 }
 
-.location, .icon, .other-params,.error{
-animation: opacity 4s;
+.location, .icon, .other-params, .error, .temp {
+    /* animation: opacity 4s; */
 }
 
-.location{
+.animation{
+    animation: opacity 4s ;
+}
+
+.location {
     font-size: 2rem;
 }
 
-.icon{
-margin-top: 2rem;    
+.icon {
+    margin-top: 1.3rem;
 }
-.temp{
+
+.temp {
     margin-top: 1rem;
     font-size: 1.6rem;
 }
@@ -83,33 +90,40 @@ margin-top: 2rem;
     justify-content: space-between;
     gap: 3rem;
     margin-top: 4rem;
-    
-}
 
-.moisture, .wind-speed{
+}
+#temp-feels-like{
+    font-size: 0.8rem;
+}
+#temp-p{
+    text-align: center;
+}
+.moisture, .wind-speed {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
 @keyframes card {
-    0%{
+    0% {
         height: 0rem;
     }
-    100%{
+
+    100% {
         height: 20rem;
     }
 }
 
 @keyframes opacity {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
-       opacity: 1;
+
+    100% {
+        opacity: 1;
     }
 }

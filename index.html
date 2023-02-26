@@ -16,22 +16,24 @@
 </head>
 
 <body>
-    <div class="weather-div">
-        <div class="big-card">
-            <div class="inputs">
-                <i class="fa-solid fa-location-dot"></i>
-                <input id="location" type="search" placeholder="Enter Your Location" >
-                <i id="search" class="fa-solid fa-magnifying-glass" onclick="fetchWeather()"></i>
-            </div>
+    <form onsubmit="getLocation(event)">
+        <div class="weather-div">
+            <div class="big-card">
+                <div class="inputs">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input id="location" type="search" placeholder="Enter Your Location" >
+                    <i type="submit" id="search" class="fa-solid fa-magnifying-glass" onclick="getLocation(event)"></i>
+                </div>
+            </form>
 
             <div class="weather-card hide">
-                <div class="location">
+                <div class="location animation">
                     <p id="location-p"></p>
                 </div>
-                <div class="icon">
+                <div class="icon animation">
                     <img src="weather-icon.png" alt="" width="200px">
                 </div>
-                <div class="other-params">
+                <div class="other-params animation">
                     <div class="moisture">
                         <i class="fa-solid fa-water"></i>
                         <p id="humitidy-p"> </p>
